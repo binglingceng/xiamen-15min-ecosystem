@@ -1,0 +1,208 @@
+{
+  "project_info": {
+    "title": "基于多源数据的厦门市15分钟生态圈研究",
+    "description": "构建可持续发展的城市生态系统，提升居民生活品质",
+    "research_areas": ["思明区", "湖里区"],
+    "data_layers": 36,
+    "analysis_methods": ["可达性分析", "网络分析", "空间分析", "多标准决策分析"]
+  },
+  
+  "gis_data_summary": {
+    "transport": {
+      "slow_mobility": {
+        "description": "慢行交通系统",
+        "layers": ["行人道路", "九级路"],
+        "coverage": "100%",
+        "quality": "优秀"
+      },
+      "public_transport": {
+        "description": "公共交通系统", 
+        "layers": ["地铁线", "铁路线"],
+        "coverage": "85%",
+        "quality": "良好"
+      },
+      "motor_transport": {
+        "description": "机动交通网络",
+        "layers": ["城市快速路", "市区一级道路", "国道", "省道", "县道", "路网合集"],
+        "coverage": "95%",
+        "quality": "优秀"
+      }
+    },
+    
+    "ecology": {
+      "green_space": {
+        "description": "绿色生态空间",
+        "layers": ["绿地", "绿色区域"],
+        "coverage": "72%",
+        "quality": "良好"
+      },
+      "blue_space": {
+        "description": "蓝色生态空间", 
+        "layers": ["水系"],
+        "coverage": "65%",
+        "quality": "良好"
+      }
+    },
+    
+    "community": {
+      "building": {
+        "description": "建筑环境",
+        "layers": ["建筑_百度"],
+        "coverage": "95%",
+        "quality": "优秀"
+      },
+      "boundary": {
+        "description": "管理边界",
+        "layers": ["乡镇边界"],
+        "coverage": "100%",
+        "quality": "优秀"
+      }
+    },
+    
+    "infrastructure": {
+      "description": "基础设施保障",
+      "layers": ["其它道路", "高速", "高速引路"],
+      "coverage": "90%",
+      "quality": "良好"
+    }
+  },
+  
+  "analysis_results": {
+    "accessibility": {
+      "siming": {
+        "walking": 85,
+        "cycling": 78,
+        "transit": 82,
+        "overall": 82
+      },
+      "huli": {
+        "walking": 78,
+        "cycling": 75,
+        "transit": 79,
+        "overall": 77
+      }
+    },
+    
+    "ecology_service": {
+      "siming": {
+        "green_coverage": 72,
+        "water_access": 68,
+        "connectivity": 88,
+        "overall": 76
+      },
+      "huli": {
+        "green_coverage": 68,
+        "water_access": 62,
+        "connectivity": 85,
+        "overall": 72
+      }
+    },
+    
+    "comprehensive_score": {
+      "siming": 82,
+      "huli": 77,
+      "average": 79.5
+    }
+  },
+  
+  "indicators": {
+    "transport_accessibility": {
+      "walking_accessibility": {
+        "value": 85,
+        "level": "优秀",
+        "description": "15分钟步行可达重要设施的覆盖率"
+      },
+      "transit_accessibility": {
+        "value": 78,
+        "level": "良好", 
+        "description": "公共交通站点500米覆盖率"
+      },
+      "road_density": {
+        "value": 92,
+        "level": "优秀",
+        "description": "单位面积道路密度指标"
+      }
+    },
+    
+    "ecology_service": {
+      "green_coverage": {
+        "value": 72,
+        "level": "良好",
+        "description": "绿地面积占城市总面积比例"
+      },
+      "water_accessibility": {
+        "value": 65,
+        "level": "一般",
+        "description": "居民到达水体休闲空间便利性"
+      },
+      "ecology_connectivity": {
+        "value": 88,
+        "level": "优秀",
+        "description": "生态廊道连通性指数"
+      }
+    }
+  },
+  
+  "recommendations": [
+    {
+      "type": "优势区域",
+      "icon": "check-circle",
+      "title": "高可达性区域",
+      "description": "思明区中心区域15分钟可达性指数达到0.85，形成了完善的生态圈网络",
+      "action": "维持现有优势，进一步优化服务质量"
+    },
+    {
+      "type": "改善区域", 
+      "icon": "exclamation-triangle",
+      "title": "待改善区域",
+      "description": "湖里区部分边缘地带生态服务设施不足，需要重点优化布局",
+      "action": "增设绿色节点，完善基础设施"
+    },
+    {
+      "type": "建议",
+      "icon": "lightbulb",
+      "title": "优化建议",
+      "description": "建议在低可达性区域增设绿色节点，完善慢行交通网络连接",
+      "action": "制定分阶段实施方案"
+    }
+  ],
+  
+  "map_layers": {
+    "accessibility": {
+      "name": "可达性分析",
+      "description": "显示15分钟生活圈可达性分布",
+      "legend": [
+        {"color": "#2ecc71", "label": "高可达性区域", "range": "85-100%"},
+        {"color": "#f39c12", "label": "中等可达性区域", "range": "70-84%"},
+        {"color": "#e74c3c", "label": "低可达性区域", "range": "0-69%"}
+      ]
+    },
+    "ecology": {
+      "name": "生态空间分布",
+      "description": "展示绿色和蓝色空间分布情况",
+      "legend": [
+        {"color": "#27ae60", "label": "高生态价值区", "range": "80-100%"},
+        {"color": "#2ecc71", "label": "中生态价值区", "range": "60-79%"},
+        {"color": "#f39c12", "label": "低生态价值区", "range": "0-59%"}
+      ]
+    },
+    "transport": {
+      "name": "交通网络",
+      "description": "显示交通基础设施分布",
+      "legend": [
+        {"color": "#3498db", "label": "交通枢纽", "range": "高密度"},
+        {"color": "#5dade2", "label": "主要道路", "range": "中密度"},
+        {"color": "#85c1e9", "label": "次要道路", "range": "低密度"}
+      ]
+    },
+    "comprehensive": {
+      "name": "综合评价",
+      "description": "多指标综合评价结果",
+      "legend": [
+        {"color": "#9b59b6", "label": "优秀", "range": "85-100分"},
+        {"color": "#8e44ad", "label": "良好", "range": "70-84分"},
+        {"color": "#7d3c98", "label": "一般", "range": "55-69分"}
+      ]
+    }
+  }
+}

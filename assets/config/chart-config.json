@@ -1,0 +1,72 @@
+{
+  "accessibilityChart": {
+    "type": "radar",
+    "title": "可达性分析对比",
+    "datasets": [
+      {
+        "label": "思明区",
+        "backgroundColor": "rgba(46, 204, 113, 0.2)",
+        "borderColor": "rgba(46, 204, 113, 1)",
+        "pointBackgroundColor": "rgba(46, 204, 113, 1)"
+      },
+      {
+        "label": "湖里区", 
+        "backgroundColor": "rgba(52, 152, 219, 0.2)",
+        "borderColor": "rgba(52, 152, 219, 1)",
+        "pointBackgroundColor": "rgba(52, 152, 219, 1)"
+      }
+    ],
+    "labels": [
+      "步行可达性",
+      "骑行可达性", 
+      "公交可达性",
+      "道路密度",
+      "交通便利度",
+      "连通性",
+      "安全性"
+    ]
+  },
+  
+  "ecologyChart": {
+    "type": "doughnut",
+    "title": "生态空间分布",
+    "colors": [
+      "#2ecc71",
+      "#3498db", 
+      "#27ae60",
+      "#16a085"
+    ],
+    "labels": [
+      "绿地覆盖",
+      "水体面积",
+      "生态连通",
+      "环境质量"
+    ]
+  },
+  
+  "comprehensiveChart": {
+    "type": "bar",
+    "title": "15分钟生态圈综合评价",
+    "datasets": [
+      {
+        "label": "思明区",
+        "backgroundColor": "rgba(46, 204, 113, 0.8)",
+        "borderColor": "rgba(46, 204, 113, 1)"
+      },
+      {
+        "label": "湖里区",
+        "backgroundColor": "rgba(52, 152, 219, 0.8)", 
+        "borderColor": "rgba(52, 152, 219, 1)"
+      }
+    ],
+    "labels": [
+      "交通可达性",
+      "生态服务",
+      "社区服务", 
+      "基础设施",
+      "环境质量",
+      "生活便利",
+      "安全指数"
+    ]
+  }
+}

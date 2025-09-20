@@ -1,0 +1,73 @@
+{
+  "platform": {
+    "name": "厦门市15分钟生态圈可视化平台",
+    "version": "1.0.0",
+    "description": "基于多源数据的厦门市15分钟生态圈研究展示平台"
+  },
+  
+  "theme": {
+    "primaryColor": "#2ecc71",
+    "secondaryColor": "#27ae60", 
+    "accentColor": "#3498db",
+    "warningColor": "#f39c12",
+    "dangerColor": "#e74c3c",
+    "darkColor": "#2c3e50",
+    "lightColor": "#ecf0f1"
+  },
+  
+  "map": {
+    "center": {
+      "lat": 24.4797,
+      "lng": 118.0819
+    },
+    "zoom": 11,
+    "minZoom": 9,
+    "maxZoom": 18,
+    "tileLayer": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+    "attribution": "© OpenStreetMap contributors"
+  },
+  
+  "districts": {
+    "siming": {
+      "name": "思明区",
+      "color": "#2ecc71",
+      "bounds": [
+        [24.4400, 118.0500],
+        [24.4800, 118.1100]
+      ]
+    },
+    "huli": {
+      "name": "湖里区", 
+      "color": "#3498db",
+      "bounds": [
+        [24.4800, 118.0500],
+        [24.5200, 118.1300]
+      ]
+    }
+  },
+  
+  "charts": {
+    "defaultOptions": {
+      "responsive": true,
+      "maintainAspectRatio": false,
+      "animation": {
+        "duration": 2000,
+        "easing": "easeInOutQuart"
+      }
+    }
+  },
+  
+  "presentation": {
+    "autoAdvanceTime": 30,
+    "enableKeyboardShortcuts": true,
+    "showProgressIndicator": true,
+    "sections": [
+      {"id": "home", "name": "首页", "duration": 120},
+      {"id": "project", "name": "项目介绍", "duration": 180},
+      {"id": "data", "name": "数据展示", "duration": 240},
+      {"id": "analysis", "name": "分析结果", "duration": 240}, 
+      {"id": "map", "name": "地图可视化", "duration": 90},
+      {"id": "indicators", "name": "指标评价", "duration": 30}
+    ]
+  }
+}
