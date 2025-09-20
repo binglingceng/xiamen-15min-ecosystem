@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="500" viewBox="0 0 800 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 浏览器窗口框架 -->
+  <rect width="800" height="500" rx="8" fill="#2c3e50"/>
+  <rect x="5" y="25" width="790" height="470" rx="4" fill="white"/>
+  
+  <!-- 浏览器顶部栏 -->
+  <rect width="800" height="25" rx="8" fill="#34495e"/>
+  <circle cx="20" cy="12.5" r="4" fill="#e74c3c"/>
+  <circle cx="35" cy="12.5" r="4" fill="#f39c12"/>
+  <circle cx="50" cy="12.5" r="4" fill="#2ecc71"/>
+  <text x="400" y="17" text-anchor="middle" font-size="10" fill="white">厦门市15分钟生态圈可视化平台</text>
+  
+  <!-- 导航栏 -->
+  <rect x="5" y="25" width="790" height="60" fill="url(#navGradient)"/>
+  <defs>
+    <linearGradient id="navGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2ecc71"/>
+      <stop offset="100%" style="stop-color:#27ae60"/>
+    </linearGradient>
+  </defs>
+  
+  <circle cx="50" cy="55" r="8" fill="white"/>
+  <text x="70" y="60" font-size="16" font-weight="bold" fill="white">厦门市15分钟生态圈</text>
+  
+  <!-- 导航菜单 -->
+  <g fill="rgba(255,255,255,0.9)">
+    <rect x="250" y="45" width="60" height="20" rx="10" fill="rgba(255,255,255,0.2)"/>
+    <text x="280" y="58" text-anchor="middle" font-size="12">首页</text>
+    <text x="350" y="58" text-anchor="middle" font-size="12">项目介绍</text>
+    <text x="420" y="58" text-anchor="middle" font-size="12">数据展示</text>
+    <text x="490" y="58" text-anchor="middle" font-size="12">分析结果</text>
+    <text x="560" y="58" text-anchor="middle" font-size="12">地图可视化</text>
+    <text x="640" y="58" text-anchor="middle" font-size="12">指标评价</text>
+  </g>
+  
+  <!-- 主要内容区域 -->
+  <!-- 左侧文字内容 -->
+  <text x="50" y="140" font-size="24" font-weight="bold" fill="#2c3e50">基于多源数据的厦门市</text>
+  <text x="50" y="170" font-size="24" font-weight="bold" fill="#2c3e50">15分钟生态圈研究</text>
+  <text x="50" y="200" font-size="14" fill="#7f8c8d">构建可持续发展的城市生态系统，提升居民生活品质</text>
+  
+  <!-- 统计数据卡片 -->
+  <g>
+    <rect x="50" y="230" width="120" height="80" rx="8" fill="#ecf0f1" stroke="#bdc3c7"/>
+    <text x="110" y="255" text-anchor="middle" font-size="20" font-weight="bold" fill="#2ecc71">2</text>
+    <text x="110" y="275" text-anchor="middle" font-size="12" fill="#2c3e50">研究区域</text>
+    <text x="110" y="290" text-anchor="middle" font-size="10" fill="#7f8c8d">思明区・湖里区</text>
+    
+    <rect x="180" y="230" width="120" height="80" rx="8" fill="#ecf0f1" stroke="#bdc3c7"/>
+    <text x="240" y="255" text-anchor="middle" font-size="20" font-weight="bold" fill="#3498db">36+</text>
+    <text x="240" y="275" text-anchor="middle" font-size="12" fill="#2c3e50">GIS数据集</text>
+    <text x="240" y="290" text-anchor="middle" font-size="10" fill="#7f8c8d">交通・生态・建筑</text>
+    
+    <rect x="310" y="230" width="120" height="80" rx="8" fill="#ecf0f1" stroke="#bdc3c7"/>
+    <text x="370" y="255" text-anchor="middle" font-size="20" font-weight="bold" fill="#e74c3c">15</text>
+    <text x="370" y="275" text-anchor="middle" font-size="12" fill="#2c3e50">分钟生活圈</text>
+    <text x="370" y="290" text-anchor="middle" font-size="10" fill="#7f8c8d">可达性分析</text>
+    
+    <rect x="440" y="230" width="120" height="80" rx="8" fill="#ecf0f1" stroke="#bdc3c7"/>
+    <text x="500" y="255" text-anchor="middle" font-size="20" font-weight="bold" fill="#f39c12">5</text>
+    <text x="500" y="275" text-anchor="middle" font-size="12" fill="#2c3e50">功能分类</text>
+    <text x="500" y="290" text-anchor="middle" font-size="10" fill="#7f8c8d">多维度评价</text>
+  </g>
+  
+  <!-- 右侧生态圈可视化 -->
+  <g transform="translate(650, 250)">
+    <circle r="80" fill="url(#circleGradient)" opacity="0.8"/>
+    <circle r="60" fill="none" stroke="rgba(46,204,113,0.6)" stroke-width="2" stroke-dasharray="5,3"/>
+    <circle r="40" fill="none" stroke="rgba(46,204,113,0.4)" stroke-width="1" stroke-dasharray="3,2"/>
+    
+    <text x="0" y="-5" text-anchor="middle" font-size="16" font-weight="bold" fill="white">15</text>
+    <text x="0" y="12" text-anchor="middle" font-size="10" fill="white">分钟生态圈</text>
+    
+    <!-- 功能节点 -->
+    <circle cx="-50" cy="-30" r="8" fill="#3498db"/>
+    <circle cx="50" cy="-30" r="8" fill="#2ecc71"/>
+    <circle cx="-50" cy="30" r="8" fill="#f39c12"/>
+    <circle cx="50" cy="30" r="8" fill="#9b59b6"/>
+  </g>
+  
+  <defs>
+    <linearGradient id="circleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2ecc71"/>
+      <stop offset="100%" style="stop-color:#27ae60"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 底部功能预览 -->
+  <rect x="50" y="350" width="700" height="120" rx="8" fill="#f8f9fa" stroke="#ecf0f1"/>
+  <text x="400" y="375" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">平台功能模块</text>
+  
+  <!-- 功能图标 -->
+  <g>
+    <rect x="80" y="390" width="60" height="60" rx="8" fill="#3498db" opacity="0.1"/>
+    <text x="110" y="410" text-anchor="middle" font-size="10" fill="#3498db">交互式图表</text>
+    <text x="110" y="425" text-anchor="middle" font-size="9" fill="#7f8c8d">数据可视化</text>
+    
+    <rect x="160" y="390" width="60" height="60" rx="8" fill="#2ecc71" opacity="0.1"/>
+    <text x="190" y="410" text-anchor="middle" font-size="10" fill="#2ecc71">地图展示</text>
+    <text x="190" y="425" text-anchor="middle" font-size="9" fill="#7f8c8d">空间分析</text>
+    
+    <rect x="240" y="390" width="60" height="60" rx="8" fill="#e74c3c" opacity="0.1"/>
+    <text x="270" y="410" text-anchor="middle" font-size="10" fill="#e74c3c">多维评价</text>
+    <text x="270" y="425" text-anchor="middle" font-size="9" fill="#7f8c8d">指标体系</text>
+    
+    <rect x="320" y="390" width="60" height="60" rx="8" fill="#f39c12" opacity="0.1"/>
+    <text x="350" y="410" text-anchor="middle" font-size="10" fill="#f39c12">结果展示</text>
+    <text x="350" y="425" text-anchor="middle" font-size="9" fill="#7f8c8d">成果汇报</text>
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 图表背景 -->
+  <rect width="400" height="300" fill="white" stroke="#ecf0f1" stroke-width="1" rx="8"/>
+  
+  <!-- 标题 -->
+  <text x="200" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">15分钟生态圈综合评价对比</text>
+  
+  <!-- Y轴标签 -->
+  <text x="30" y="60" font-size="10" fill="#7f8c8d">100%</text>
+  <text x="30" y="90" font-size="10" fill="#7f8c8d">80%</text>
+  <text x="30" y="120" font-size="10" fill="#7f8c8d">60%</text>
+  <text x="30" y="150" font-size="10" fill="#7f8c8d">40%</text>
+  <text x="30" y="180" font-size="10" fill="#7f8c8d">20%</text>
+  <text x="30" y="210" font-size="10" fill="#7f8c8d">0%</text>
+  
+  <!-- 网格线 -->
+  <line x1="50" y1="55" x2="370" y2="55" stroke="#ecf0f1" stroke-width="1"/>
+  <line x1="50" y1="85" x2="370" y2="85" stroke="#ecf0f1" stroke-width="1"/>
+  <line x1="50" y1="115" x2="370" y2="115" stroke="#ecf0f1" stroke-width="1"/>
+  <line x1="50" y1="145" x2="370" y2="145" stroke="#ecf0f1" stroke-width="1"/>
+  <line x1="50" y1="175" x2="370" y2="175" stroke="#ecf0f1" stroke-width="1"/>
+  <line x1="50" y1="205" x2="370" y2="205" stroke="#ecf0f1" stroke-width="1"/>
+  
+  <!-- 思明区数据柱状图 -->
+  <rect x="60" y="95" width="30" height="110" fill="#2ecc71" opacity="0.8"/>
+  <rect x="110" y="115" width="30" height="90" fill="#2ecc71" opacity="0.8"/>
+  <rect x="160" y="125" width="30" height="80" fill="#2ecc71" opacity="0.8"/>
+  <rect x="210" y="85" width="30" height="120" fill="#2ecc71" opacity="0.8"/>
+  <rect x="260" y="105" width="30" height="100" fill="#2ecc71" opacity="0.8"/>
+  <rect x="310" y="95" width="30" height="110" fill="#2ecc71" opacity="0.8"/>
+  
+  <!-- 湖里区数据柱状图 -->
+  <rect x="65" y="115" width="25" height="90" fill="#3498db" opacity="0.8"/>
+  <rect x="115" y="135" width="25" height="70" fill="#3498db" opacity="0.8"/>
+  <rect x="165" y="145" width="25" height="60" fill="#3498db" opacity="0.8"/>
+  <rect x="215" y="105" width="25" height="100" fill="#3498db" opacity="0.8"/>
+  <rect x="265" y="125" width="25" height="80" fill="#3498db" opacity="0.8"/>
+  <rect x="315" y="105" width="25" height="100" fill="#3498db" opacity="0.8"/>
+  
+  <!-- X轴标签 -->
+  <g font-size="10" fill="#2c3e50" text-anchor="middle">
+    <text x="75" y="225">交通可达性</text>
+    <text x="125" y="225">生态服务</text>
+    <text x="175" y="225">社区服务</text>
+    <text x="225" y="225">基础设施</text>
+    <text x="275" y="225">环境质量</text>
+    <text x="325" y="225">生活便利</text>
+  </g>
+  
+  <!-- 图例 -->
+  <rect x="50" y="240" width="15" height="15" fill="#2ecc71" opacity="0.8"/>
+  <text x="70" y="252" font-size="12" fill="#2c3e50">思明区</text>
+  
+  <rect x="150" y="240" width="15" height="15" fill="#3498db" opacity="0.8"/>
+  <text x="170" y="252" font-size="12" fill="#2c3e50">湖里区</text>
+  
+  <!-- 数值标注 -->
+  <text x="75" y="90" text-anchor="middle" font-size="8" fill="#2c3e50" font-weight="bold">82</text>
+  <text x="75" y="110" text-anchor="middle" font-size="8" fill="#2c3e50" font-weight="bold">76</text>
+  
+  <text x="125" y="110" text-anchor="middle" font-size="8" fill="#2c3e50" font-weight="bold">76</text>
+  <text x="125" y="130" text-anchor="middle" font-size="8" fill="#2c3e50" font-weight="bold">72</text>
+  
+  <text x="175" y="120" text-anchor="middle" font-size="8" fill="#2c3e50" font-weight="bold">78</text>
+  <text x="175" y="140" text-anchor="middle" font-size="8" fill="#2c3e50" font-weight="bold">73</text>
+</svg>

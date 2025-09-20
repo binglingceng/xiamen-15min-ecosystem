@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 电塔 -->
+  <line x1="24" y1="8" x2="24" y2="40" stroke="#34495e" stroke-width="3"/>
+  <line x1="16" y1="16" x2="32" y2="16" stroke="#34495e" stroke-width="2"/>
+  <line x1="18" y1="24" x2="30" y2="24" stroke="#34495e" stroke-width="2"/>
+  <line x1="20" y1="32" x2="28" y2="32" stroke="#34495e" stroke-width="2"/>
+  
+  <!-- 电线 -->
+  <path d="M10 20 Q16 18 24 20 Q32 22 38 20" stroke="#2c3e50" stroke-width="1"/>
+  <path d="M10 28 Q16 26 24 28 Q32 30 38 28" stroke="#2c3e50" stroke-width="1"/>
+  
+  <!-- 基站 -->
+  <rect x="6" y="12" width="4" height="8" fill="#3498db"/>
+  <line x1="8" y1="10" x2="8" y2="12" stroke="#e74c3c" stroke-width="2"/>
+  <circle cx="7" cy="9" r="1" fill="#e74c3c"/>
+  <circle cx="9" cy="9" r="1" fill="#e74c3c"/>
+  
+  <rect x="38" y="12" width="4" height="8" fill="#3498db"/>
+  <line x1="40" y1="10" x2="40" y2="12" stroke="#e74c3c" stroke-width="2"/>
+  <circle cx="39" cy="9" r="1" fill="#e74c3c"/>
+  <circle cx="41" cy="9" r="1" fill="#e74c3c"/>
+  
+  <!-- 管道系统 -->
+  <rect x="6" y="36" width="36" height="4" fill="#95a5a6"/>
+  <rect x="8" y="34" width="2" height="2" fill="#7f8c8d"/>
+  <rect x="16" y="34" width="2" height="2" fill="#7f8c8d"/>
+  <rect x="24" y="34" width="2" height="2" fill="#7f8c8d"/>
+  <rect x="32" y="34" width="2" height="2" fill="#7f8c8d"/>
+  <rect x="38" y="34" width="2" height="2" fill="#7f8c8d"/>
+  
+  <!-- 信号波 -->
+  <path d="M8 6 Q10 8 8 10" stroke="#27ae60" stroke-width="1" fill="none"/>
+  <path d="M6 6 Q10 8 6 10" stroke="#27ae60" stroke-width="1" fill="none"/>
+  
+  <path d="M40 6 Q38 8 40 10" stroke="#27ae60" stroke-width="1" fill="none"/>
+  <path d="M42 6 Q38 8 42 10" stroke="#27ae60" stroke-width="1" fill="none"/>
+</svg>
