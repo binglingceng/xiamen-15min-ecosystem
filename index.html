@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基于多源数据的厦门市15分钟生态圈可视化平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-leaf"></i>
+                <span>厦门市15分钟生态圈</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active" data-section="home">首页</a></li>
+                <li><a href="#project" class="nav-link" data-section="project">项目介绍</a></li>
+                <li><a href="#data" class="nav-link" data-section="data">数据展示</a></li>
+                <li><a href="#analysis" class="nav-link" data-section="analysis">分析结果</a></li>
+                <li><a href="#map" class="nav-link" data-section="map">地图可视化</a></li>
+                <li><a href="#indicators" class="nav-link" data-section="indicators">指标评价</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main class="main-content">
+        <!-- 首页部分 -->
+        <section id="home" class="section active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1 class="hero-title">基于多源数据的厦门市15分钟生态圈研究</h1>
+                    <p class="hero-subtitle">构建可持续发展的城市生态系统，提升居民生活品质</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">研究区域</div>
+                            <div class="stat-desc">思明区・湖里区</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">36+</div>
+                            <div class="stat-label">GIS数据集</div>
+                            <div class="stat-desc">交通・生态・建筑</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">分钟生活圈</div>
+                            <div class="stat-desc">可达性分析</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">5</div>
+                            <div class="stat-label">功能分类</div>
+                            <div class="stat-desc">多维度评价</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="ecological-circle"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 项目介绍部分 -->
+        <section id="project" class="section">
+            <div class="container">
+                <h2 class="section-title">项目介绍</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="card-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>研究目标</h3>
+                        <p>构建基于多源数据的厦门市15分钟生态圈评价体系，为城市可持续发展提供科学依据</p>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>数据来源</h3>
+                        <p>整合政府开放数据、遥感影像、地理信息系统等多源异构数据</p>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>分析方法</h3>
+                        <p>运用空间分析、网络分析、多标准决策分析等方法进行综合评价</p>
+                    </div>
+                    <div class="project-card">
+                        <div class="card-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>创新点</h3>
+                        <p>提出多维度生态圈评价模型，实现精细化城市规划决策支持</p>
+                    </div>
+                </div>
+                
+                <div class="research-framework">
+                    <h3>研究框架</h3>
+                    <div class="framework-container">
+                        <div class="framework-step">
+                            <div class="step-number">1</div>
+                            <h4>数据收集</h4>
+                            <p>多源数据整合</p>
+                        </div>
+                        <div class="framework-arrow">→</div>
+                        <div class="framework-step">
+                            <div class="step-number">2</div>
+                            <h4>数据处理</h4>
+                            <p>分类标准化</p>
+                        </div>
+                        <div class="framework-arrow">→</div>
+                        <div class="framework-step">
+                            <div class="step-number">3</div>
+                            <h4>可达性分析</h4>
+                            <p>15分钟范围计算</p>
+                        </div>
+                        <div class="framework-arrow">→</div>
+                        <div class="framework-step">
+                            <div class="step-number">4</div>
+                            <h4>综合评价</h4>
+                            <p>多指标体系</p>
+                        </div>
+                        <div class="framework-arrow">→</div>
+                        <div class="framework-step">
+                            <div class="step-number">5</div>
+                            <h4>结果应用</h4>
+                            <p>政策建议</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 数据展示部分 -->
+        <section id="data" class="section">
+            <div class="container">
+                <h2 class="section-title">数据展示</h2>
+                <div class="data-overview">
+                    <div class="data-categories">
+                        <div class="category-card active" data-category="transport">
+                            <div class="category-icon">
+                                <i class="fas fa-road"></i>
+                            </div>
+                            <h3>交通可达性数据</h3>
+                            <p>慢行交通、公共交通、机动交通</p>
+                        </div>
+                        <div class="category-card" data-category="ecology">
+                            <div class="category-icon">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                            <h3>生态休闲服务</h3>
+                            <p>绿色空间、蓝色空间</p>
+                        </div>
+                        <div class="category-card" data-category="community">
+                            <div class="category-icon">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h3>居住社区服务</h3>
+                            <p>建筑环境、管理边界</p>
+                        </div>
+                        <div class="category-card" data-category="infrastructure">
+                            <div class="category-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3>基础设施保障</h3>
+                            <p>其他道路、高速网络</p>
+                        </div>
+                    </div>
+                    
+                    <div class="data-detail">
+                        <div class="detail-content active" id="transport-detail">
+                            <h4>交通可达性数据详情</h4>
+                            <div class="data-stats">
+                                <div class="stat-box">
+                                    <div class="stat-value">12</div>
+                                    <div class="stat-name">道路图层</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-value">4</div>
+                                    <div class="stat-name">轨道交通</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-value">100%</div>
+                                    <div class="stat-name">覆盖率</div>
+                                </div>
+                            </div>
+                            <div class="data-list">
+                                <div class="data-item">
+                                    <i class="fas fa-walking"></i>
+                                    <span>慢行交通系统：行人道路、九级路</span>
+                                </div>
+                                <div class="data-item">
+                                    <i class="fas fa-subway"></i>
+                                    <span>公共交通系统：地铁线、铁路线</span>
+                                </div>
+                                <div class="data-item">
+                                    <i class="fas fa-car"></i>
+                                    <span>机动交通网络：快速路、国省道等</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-content" id="ecology-detail">
+                            <h4>生态休闲服务数据详情</h4>
+                            <div class="data-stats">
+                                <div class="stat-box">
+                                    <div class="stat-value">4</div>
+                                    <div class="stat-name">绿地图层</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-value">2</div>
+                                    <div class="stat-name">水系图层</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-value">85%</div>
+                                    <div class="stat-name">生态覆盖</div>
+                                </div>
+                            </div>
+                            <div class="data-list">
+                                <div class="data-item">
+                                    <i class="fas fa-leaf"></i>
+                                    <span>绿色空间：公园绿地、绿色区域</span>
+                                </div>
+                                <div class="data-item">
+                                    <i class="fas fa-water"></i>
+                                    <span>蓝色空间：水系、滨水区域</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-content" id="community-detail">
+                            <h4>居住社区服务数据详情</h4>
+                            <div class="data-stats">
+                                <div class="stat-box">
+                                    <div class="stat-value">2</div>
+                                    <div class="stat-name">建筑图层</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-value">2</div>
+                                    <div class="stat-name">边界图层</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-value">95%</div>
+                                    <div class="stat-name">数据完整性</div>
+                                </div>
+                            </div>
+                            <div class="data-list">
+                                <div class="data-item">
+                                    <i class="fas fa-home"></i>
+                                    <span>建筑环境：建筑物分布、密度分析</span>
+                                </div>
+                                <div class="data-item">
+                                    <i class="fas fa-map-marked"></i>
+                                    <span>管理边界：行政区划、社区边界</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-content" id="infrastructure-detail">
+                            <h4>基础设施保障数据详情</h4>
+                            <div class="data-stats">
+                                <div class="stat-box">
+                                    <div class="stat-value">6</div>
+                                    <div class="stat-name">基础设施图层</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-value">2</div>
+                                    <div class="stat-name">研究区域</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-value">90%</div>
+                                    <div class="stat-name">网络连通性</div>
+                                </div>
+                            </div>
+                            <div class="data-list">
+                                <div class="data-item">
+                                    <i class="fas fa-road"></i>
+                                    <span>其他道路：服务性道路网络</span>
+                                </div>
+                                <div class="data-item">
+                                    <i class="fas fa-highway"></i>
+                                    <span>高速网络：高速公路及引道</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 分析结果部分 -->
+        <section id="analysis" class="section">
+            <div class="container">
+                <h2 class="section-title">分析结果</h2>
+                <div class="analysis-grid">
+                    <div class="analysis-card">
+                        <h3>可达性分析结果</h3>
+                        <div class="chart-container">
+                            <canvas id="accessibilityChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="analysis-card">
+                        <h3>生态空间分布</h3>
+                        <div class="chart-container">
+                            <canvas id="ecologyChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="analysis-card full-width">
+                        <h3>15分钟生态圈综合评价</h3>
+                        <div class="chart-container">
+                            <canvas id="comprehensiveChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="insights">
+                    <h3>主要发现</h3>
+                    <div class="insights-grid">
+                        <div class="insight-item">
+                            <div class="insight-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>高可达性区域</h4>
+                                <p>思明区中心区域15分钟可达性指数达到0.85，形成了完善的生态圈网络</p>
+                            </div>
+                        </div>
+                        <div class="insight-item">
+                            <div class="insight-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>待改善区域</h4>
+                                <p>湖里区部分边缘地带生态服务设施不足，需要重点优化布局</p>
+                            </div>
+                        </div>
+                        <div class="insight-item">
+                            <div class="insight-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>优化建议</h4>
+                                <p>建议在低可达性区域增设绿色节点，完善慢行交通网络连接</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 地图可视化部分 -->
+        <section id="map" class="section">
+            <div class="container">
+                <h2 class="section-title">地图可视化</h2>
+                <div class="map-controls">
+                    <button class="map-btn active" data-layer="accessibility">可达性分析</button>
+                    <button class="map-btn" data-layer="ecology">生态空间</button>
+                    <button class="map-btn" data-layer="transport">交通网络</button>
+                    <button class="map-btn" data-layer="comprehensive">综合评价</button>
+                </div>
+                <div id="map-container">
+                    <div id="mainMap"></div>
+                </div>
+                <div class="map-legend">
+                    <h4>图例说明</h4>
+                    <div class="legend-items">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #2ecc71;"></div>
+                            <span>高可达性区域</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #f39c12;"></div>
+                            <span>中等可达性区域</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background: #e74c3c;"></div>
+                            <span>低可达性区域</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 指标评价部分 -->
+        <section id="indicators" class="section">
+            <div class="container">
+                <h2 class="section-title">指标评价体系</h2>
+                <div class="indicators-overview">
+                    <div class="indicator-category">
+                        <h3>交通可达性指标</h3>
+                        <div class="indicator-items">
+                            <div class="indicator-item">
+                                <span class="indicator-name">步行可达性</span>
+                                <div class="indicator-bar">
+                                    <div class="indicator-fill" style="width: 85%;"></div>
+                                </div>
+                                <span class="indicator-value">85%</span>
+                            </div>
+                            <div class="indicator-item">
+                                <span class="indicator-name">公交可达性</span>
+                                <div class="indicator-bar">
+                                    <div class="indicator-fill" style="width: 78%;"></div>
+                                </div>
+                                <span class="indicator-value">78%</span>
+                            </div>
+                            <div class="indicator-item">
+                                <span class="indicator-name">道路密度</span>
+                                <div class="indicator-bar">
+                                    <div class="indicator-fill" style="width: 92%;"></div>
+                                </div>
+                                <span class="indicator-value">92%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="indicator-category">
+                        <h3>生态服务指标</h3>
+                        <div class="indicator-items">
+                            <div class="indicator-item">
+                                <span class="indicator-name">绿地覆盖率</span>
+                                <div class="indicator-bar">
+                                    <div class="indicator-fill" style="width: 72%;"></div>
+                                </div>
+                                <span class="indicator-value">72%</span>
+                            </div>
+                            <div class="indicator-item">
+                                <span class="indicator-name">水体可达性</span>
+                                <div class="indicator-bar">
+                                    <div class="indicator-fill" style="width: 65%;"></div>
+                                </div>
+                                <span class="indicator-value">65%</span>
+                            </div>
+                            <div class="indicator-item">
+                                <span class="indicator-name">生态连通性</span>
+                                <div class="indicator-bar">
+                                    <div class="indicator-fill" style="width: 88%;"></div>
+                                </div>
+                                <span class="indicator-value">88%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="overall-score">
+                    <h3>综合评价得分</h3>
+                    <div class="score-display">
+                        <div class="score-circle">
+                            <svg viewBox="0 0 36 36" class="circular-chart">
+                                <path class="circle-bg" d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                                <path class="circle" stroke-dasharray="82, 100" d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                                />
+                            </svg>
+                            <div class="score-text">
+                                <span class="score-number">82</span>
+                                <span class="score-label">分</span>
+                            </div>
+                        </div>
+                        <div class="score-description">
+                            <h4>评价等级：良好</h4>
+                            <p>厦门市思明区和湖里区的15分钟生态圈建设整体达到良好水平，在交通可达性和基础设施方面表现优秀，生态服务功能有待进一步提升。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 脚本引入 -->
+    <script src="js/app.js"></script>
+</body>
+</html>
